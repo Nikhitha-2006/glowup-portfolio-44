@@ -123,16 +123,12 @@ const PortfolioSections = () => {
                   <p className="text-muted-foreground leading-relaxed flex-1">{p.desc}</p>
                   <div className="flex gap-3 mt-5">
                     <a
-                      href="#"
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:opacity-80 transition-opacity"
                     >
                       <Github size={15} /> GitHub
-                    </a>
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-secondary hover:opacity-80 transition-opacity"
-                    >
-                      <ExternalLink size={15} /> Live Demo
                     </a>
                   </div>
                 </div>
