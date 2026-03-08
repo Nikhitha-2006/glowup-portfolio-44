@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Download, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
+  const resumeHref = `${import.meta.env.BASE_URL}Resume_Nikhitha_Pyda.pdf`;
+  const isPreview = typeof window !== "undefined" && window.location.search.includes("__lovable_token");
   return (
     <section
       id="hero"
