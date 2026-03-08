@@ -16,18 +16,22 @@ const projects = [
   {
     title: "CarcinoScope",
     desc: "Real-time cancer risk prediction web app using Flask and TensorFlow. Designed for diagnostic support with secure data handling and intuitive UI.",
+    github: "https://github.com/Nikhitha-2006/CarcinoScope",
   },
   {
     title: "ZoneVault",
     desc: "An offline-first emergency contact vault designed for secure, private access and rapid sharing during critical situations.",
+    github: "https://github.com/Nikhitha-2006/ZoneVault",
   },
   {
     title: "Smart Retail Management System",
     desc: "A dynamic dashboard solution for tracking inventory and sales using SQL, designed to streamline operations for small businesses.",
+    github: "https://github.com/Nikhitha-2006/Smart-Retail-Management-System",
   },
   {
     title: "IoT-Based Natural Disaster Alert System",
     desc: "Uses sensor networks and real-time data to detect disasters and trigger rapid alerts for community safety.",
+    github: "https://github.com/Nikhitha-2006/IoT-Natural-Disaster-Alert",
   },
 ];
 
