@@ -51,7 +51,8 @@ const HeroSection = () => {
             View Projects
           </a>
           <a
-            href="#contact"
+            href="/Resume_Nikhitha_Pyda.pdf"
+            download
             className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             <Download size={18} />
