@@ -1,9 +1,34 @@
 import { motion } from "framer-motion";
 import { Download, ArrowDown } from "lucide-react";
+import type { MouseEvent } from "react";
 
 const HeroSection = () => {
   const resumeHref = `${import.meta.env.BASE_URL}Resume_Nikhitha_Pyda.pdf`;
   const isPreview = typeof window !== "undefined" && window.location.search.includes("__lovable_token");
+
+  const handleResumeClick = async (e: MouseEvent<HTMLAnchorElement>) => {
+    if (!isPreview) return;
+
+    e.preventDefault();
+
+    try {
+      const response = await fetch(resumeHref);
+      if (!response.ok) throw new Error("Failed to fetch resume");
+
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = "Resume_Nikhitha_Pyda.pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(blobUrl);
+    } catch {
+      window.location.href = resumeHref;
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -54,9 +79,8 @@ const HeroSection = () => {
           </a>
           <a
             href={resumeHref}
-            download={isPreview ? undefined : "Resume_Nikhitha_Pyda.pdf"}
-            target={isPreview ? "_blank" : undefined}
-            rel={isPreview ? "noopener noreferrer" : undefined}
+            download="Resume_Nikhitha_Pyda.pdf"
+            onClick={handleResumeClick}
             className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             <Download size={18} />
