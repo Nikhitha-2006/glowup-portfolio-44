@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/b755d36d-59c7-44bf-b0b2-8836dc99ed3d
+**URL**: https://glowup-portfolio-44.vercel.app/
 
 ## How can I edit this code?
 
